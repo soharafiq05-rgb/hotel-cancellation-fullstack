@@ -1,0 +1,23 @@
+Planned Novelty Factor — Hotel Booking Cancellation Prediction
+
+Existing work on hotel cancellation prediction (including recent
+papers using SHAP for explainability) identifies which booking
+features drive cancellation risk — e.g. lead time, deposit type,
+arrival month — but stops at ranking feature importance.
+
+Our planned contribution extends this by translating SHAP's
+feature-level explanations into an estimated monetary impact per
+factor, rather than reporting importance alone. For example, instead
+of reporting "lack of a deposit is the most important predictor of
+cancellation," the model would estimate "bookings without a deposit
+account for an estimated $X in projected lost revenue from
+cancellations," giving hotel managers an actionable, profit-driven
+basis for policy decisions (e.g. requiring deposits for
+high-risk booking profiles).
+
+This differs from the closest existing work (CatBoost + SHAP on a
+private PMS dataset, August 2026) in two ways: (1) it uses the public
+Kaggle Hotel Booking Demand dataset with Random Forest and XGBoost
+models rather than a private dataset with CatBoost, and (2) it adds
+the profit/cost-translation step, which the existing literature does
+not include.
